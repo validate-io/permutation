@@ -1,4 +1,4 @@
-permutation
+Permutation
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
@@ -17,18 +17,35 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-permutation' );
+var isPermutation = require( 'validate.io-permutation' );
 ```
 
-#### foo( value )
+#### isPermutation( value, arr )
 
-What does this function do?
+Validates if a `value` is a permutation. The second argument defines the list of values which can be permuted. The `array` need not be unique.
+
+``` javascript
+var arr = [1,2,3],
+	value = [2,3,1];
+
+var isPermutation( value, arr );
+// returns true
+```
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-permutation' );
+var isPermutation = require( 'validate.io-permutation' );
+
+console.log( isPermutation( [2,3,1], [1,2,3] ) );
+// returns true
+
+console.log( isPermutation( [1,4,3], [1,2,3] ) );
+// returns false
+
+console.log( isPermutation( ['a','b'], ['a','c','b'] ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,

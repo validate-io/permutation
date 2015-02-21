@@ -26,12 +26,20 @@
     "validate.io",
     "validate",
     "validation",
-    "validator"
+    "validator",
+    "valid",
+    "array",
+    "permutation",
+    "permute",
+    "is",
+    "ispermutation"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/permutation/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "validate.io-array": "^1.0.3"
+  },
   "devDependencies": {
     "chai": "1.x.x",
     "mocha": "1.x.x",
