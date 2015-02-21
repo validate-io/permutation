@@ -28,7 +28,7 @@ Validates if a `value` is a permutation. The second argument defines the list of
 var arr = [1,2,3],
 	value = [2,3,1];
 
-var isPermutation( value, arr );
+var bool = isPermutation( value, arr );
 // returns true
 ```
 
