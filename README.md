@@ -22,7 +22,7 @@ var isPermutation = require( 'validate.io-permutation' );
 
 #### isPermutation( value, arr )
 
-Validates if a `value` is a permutation. The second argument defines the list of values which can be permuted. The `array` need not be unique.
+Validates if a `value` is a permutation. The second argument defines the list of values which can be permuted. The list `array` need not be unique.
 
 ``` javascript
 var arr = [1,2,3],
