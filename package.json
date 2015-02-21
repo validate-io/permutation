@@ -1,6 +1,6 @@
 {
   "name": "validate.io-permutation",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Validates if a value is a permutation.",
   "author": {
     "name": "Athan Reines",
