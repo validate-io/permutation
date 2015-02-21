@@ -41,13 +41,13 @@ describe( 'validate.io-permutation', function tests() {
 		}
 		function badValue( value ) {
 			return function() {
-				isPermutation( [], value );
+				isPermutation( value, [] );
 			};
 		}
 	});
 
 	it( 'should positively validate', function test() {
-		var bool = isPermutation( [2,3,1], [1,2,3] );
+		var bool = isPermutation( [1,2,3], [2,3,1] );
 		assert.ok( bool );
 	});
 
@@ -71,7 +71,7 @@ describe( 'validate.io-permutation', function tests() {
 			assert.notOk( badValue( values[i] ) );
 		}
 		function badValue( value ) {
-			return isPermutation( value, [1,2,3] );
+			return isPermutation( [1,2,3], value );
 		}
 	});
 
@@ -84,7 +84,7 @@ describe( 'validate.io-permutation', function tests() {
 		list = [ obj, arr, obj, arr ];
 		value = [ arr, arr, obj, obj ];
 
-		assert.ok( isPermutation( value, list ) );
+		assert.ok( isPermutation( list, value ) );
 	});
 
 });

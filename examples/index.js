@@ -2,11 +2,11 @@
 
 var isPermutation = require( './../lib' );
 
-console.log( isPermutation( [2,3,1], [1,2,3] ) );
+console.log( isPermutation( [1,2,3], [2,3,1] ) );
 // returns true
 
-console.log( isPermutation( [1,4,3], [1,2,3] ) );
+console.log( isPermutation( [1,2,3], [1,4,3] ) );
 // returns false
 
-console.log( isPermutation( ['a','b'], ['a','c','b'] ) );
+console.log( isPermutation( ['a','c','b'], ['a','b'] ) );
 // returns false

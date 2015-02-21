@@ -20,15 +20,15 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 var isPermutation = require( 'validate.io-permutation' );
 ```
 
-#### isPermutation( value, arr )
+#### isPermutation( arr, value )
 
-Validates if a `value` is a permutation. The second argument defines the list of values which can be permuted. The list `array` need not be unique.
+Validates if a `value` is an `array` permutation. The first argument defines the list of values which can be permuted. The list `array` need not be unique.
 
 ``` javascript
 var arr = [1,2,3],
 	value = [2,3,1];
 
-var bool = isPermutation( value, arr );
+var bool = isPermutation( arr, value );
 // returns true
 ```
 
@@ -38,13 +38,13 @@ var bool = isPermutation( value, arr );
 ``` javascript
 var isPermutation = require( 'validate.io-permutation' );
 
-console.log( isPermutation( [2,3,1], [1,2,3] ) );
+console.log( isPermutation( [1,2,3], [2,3,1] ) );
 // returns true
 
-console.log( isPermutation( [1,4,3], [1,2,3] ) );
+console.log( isPermutation( [1,2,3], [1,4,3] ) );
 // returns false
 
-console.log( isPermutation( ['a','b'], ['a','c','b'] ) );
+console.log( isPermutation( ['a','c','b'], ['a','b'] ) );
 // returns false
 ```
 
